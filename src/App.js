@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import HomePage from './components/HomePage';
+import './styleSheet/StyleSheet.css'
 
 function App() {
   return (
-    <div className="App">
-      Todo List
+    <div className='pageStyling'>
+      <HomePage />
     </div>
   );
 }

@@ -1,0 +1,45 @@
+
+.addTask{
+    background-color:  rgb(161, 92, 216);
+    height: 600px;
+}
+
+.tasksList{
+    background-color: rgba(233,84,184,255);
+    height: 600px;
+}
+
+.imageStyle{
+    height: auto;
+    width: 90%;
+}
+
+.inputStyle{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 3px;
+}
+
+.textField{
+    background-color: white;
+    border-radius: 5px;
+    width: 350px;
+}
+
+.buttonStyle{
+    margin: 10px;
+    background-color: rgba(233,84,184,255) !important;
+}
+
+.TodoButtonStyle{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 25px;
+}
+
+h6{
+    color: white !important;
+    text-align: center;
+}
