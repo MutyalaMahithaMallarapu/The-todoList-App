@@ -1,4 +1,4 @@
-# **Application Description**
+## **Application Description**
 
 **Title**: The to do List App
 
