@@ -13,6 +13,7 @@
 **Zustand Store**: Leveraged Zustand for managing application state in a lightweight and efficient manner.
 
 **App Overview**:
+
 ![image](https://github.com/MutyalaMahithaMallarapu/The-todolist-App/assets/167528557/cfb3b1e7-2d35-4381-96a5-a54fd3d1fa5f)
 
 
