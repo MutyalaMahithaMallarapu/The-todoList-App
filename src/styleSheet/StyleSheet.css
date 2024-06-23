@@ -7,6 +7,9 @@
 .tasksList{
     background-color: rgba(233,84,184,255);
     height: 600px;
+    max-height: fit-content;
+    overflow-y: scroll;
+    /* margin: 15px 0px; */
 }
 
 .imageStyle{
@@ -42,4 +45,21 @@
 h6{
     color: white !important;
     text-align: center;
+}
+
+.cardStyling{
+    background-color: 	#feff9c !important;
+    margin: 20px;
+}
+
+.tasksListGrid{
+    max-height: 500px;
+}
+
+.noDataPage{
+    color: white;
+    display: flex;
+    max-height: 500px;
+    text-align: center;
+    margin: 130px;
 }

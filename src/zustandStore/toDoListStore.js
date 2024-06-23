@@ -1,20 +1,18 @@
-import {create} from 'zustand';
+import { create } from 'zustand';
 
 const useToDoListStore = create((set) => ({
-    
-  formData: {
-      title: '',
-      summary: ''
-    },
-  
-    setFormData: (newData) => set((state) => ({
-      formData: { ...state.formData, ...newData },
+
+  data: [],
+
+  setData: (newData) => set((state) => ({
+    data: [...state.data, newData],
+  })),
+
+  deleteTodo: (todoId) =>
+    set((state) => ({
+      data: state.data.filter((data) => data.id !== todoId),
     })),
 
-    isToDoListBtnClicked: false,
-    setIsToDoListBtnClicked: (status) => {
-      set({isToDoListBtnClicked: status})
-    }
-  }));
+}));
 
-  export default useToDoListStore;
+export default useToDoListStore;

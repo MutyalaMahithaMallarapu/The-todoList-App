@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import '../styleSheet/StyleSheet.css'
 import Paper from '@mui/material/Paper';
 import ToDoListImg from '../assets/ToDoList.webp'
@@ -7,11 +7,21 @@ import Button from '@mui/material/Button';
 import useToDoListStore from '../zustandStore/toDoListStore';
 
 const AddTask = () => {
-    const { formData, setFormData } = useToDoListStore();
-    const handleChange = (e, type) => {
-        const { value } = e.target;
-        setFormData({ [type]: value });
-    };
+    const { data, setData } = useToDoListStore();
+    const [title, setTitle] = useState('')
+    const [summary, setSummary] = useState('')
+ 
+    const handleOnClick = () => {
+        const newToDoData = {
+            id: Date.now(),
+            title: title,
+            summary: summary,
+        }
+        setData(newToDoData)
+        setTitle('')
+        setSummary('')
+    }
+
     return (
         <Paper elevation={10}>
             <div className="addTask">
@@ -24,8 +34,8 @@ const AddTask = () => {
                         className="textField"
                         label="Add Task title"
                         variant="outlined"
-                        value={formData.title}
-                        onChange={(e) => { handleChange(e, 'title') }}
+                        value={title}
+                        onChange={(e) => { setTitle(e.target.value) }}
                     />
                 </div>
                 <div className="inputStyle">
@@ -34,15 +44,15 @@ const AddTask = () => {
                         className="textField"
                         label="Add Task summary"
                         variant="outlined"
-                        value={formData.summary}
-                        onChange={(e) => { handleChange(e, 'summary') }}
+                        value={summary}
+                        onChange={(e) => { setSummary(e.target.value) }}
                     />
                 </div>
                 <div className="TodoButtonStyle" >
                     <Button
                         className="buttonStyle"
                         variant="contained"
-                        // onClick={setIsToDoListBtnClicked(true)}
+                        onClick={handleOnClick}
                     > Add to do
                     </Button>
                 </div>
